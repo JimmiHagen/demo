@@ -11,8 +11,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..',
-                sh 'npm config ls',
+                echo 'Testing..'
+                sh 'npm config ls'
                 sh 'npm -i save'
             }
         }
