@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     tools {nodejs "node"}
 
     stages {
@@ -18,6 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'npm run demo'
             }
         }
     }
