@@ -4,21 +4,22 @@ pipeline {
     tools {nodejs "node"}
 
     stages {
-        stage('Build') {
+        stage('Clone Repo') {
             steps {
-                echo 'Building..'
+              git 'https://github.com/JimmiHagen/demo'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
-                sh 'npm config ls'
+                echo 'Testing..',
+                sh 'npm config ls',
+                sh 'npm -i save'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'npm run demo'
+                sh 'node demo.js'
             }
         }
     }
