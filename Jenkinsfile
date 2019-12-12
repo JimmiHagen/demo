@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'npm config ls'
-                sh 'npm -i save'
+                sh 'npm install'
             }
         }
         stage('Deploy') {
