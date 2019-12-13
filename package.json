@@ -1,12 +1,12 @@
 {
   "name": "plastiq",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test CI/CD demo for Plastiq",
   "main": "index.js",
   "scripts": {
     "demo": "demo.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "start http://localhost:8082/"
   },
-  "author": "",
+  "author": "Jimmi Hagen w help from Plastiq and Diana",
   "license": "ISC"
 }
