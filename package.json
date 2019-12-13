@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "demo": "demo.js",
-    "test": "start http://localhost:8082/"
+    "test": "open http://localhost:8082/"
   },
   "author": "Jimmi Hagen w help from Plastiq and Diana",
   "license": "ISC"
