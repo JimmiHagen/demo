@@ -18,6 +18,7 @@ pipeline {
         stage('Test'){
           steps {
             //echo 'Testing...'
+            sh 'node demo.js'
             sh 'node demotest.js'
           }
         }

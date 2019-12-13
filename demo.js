@@ -12,5 +12,5 @@ stream.once('open', function(fd) {
 function getHtml(request) {
 
   return '<!DOCTYPE html>'
-       + '<html><head>' + "Test Page" + '</head><body>' + "Test text" + '</body></html>';
+       + '<html><head>' + "Hello World" + '</head><body>' + "Test text" + '</body></html>';
 };
