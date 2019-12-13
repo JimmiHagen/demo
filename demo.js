@@ -1,6 +1,16 @@
-var http = require('http');
+var fs = require('fs');
 
-http.createServer(function( req, res ){
-  res.writeHead(200, {'Content-Type' : 'text/plain'});
-  res.end('TEST PAGE!!! It\'s for PLASTIQ!');
-}).listen(8082);
+var fileName = 'test.html';
+var stream = fs.createWriteStream(fileName);
+
+stream.once('open', function(fd) {
+  var html = getHtml();
+
+  stream.end(html);
+});
+
+function getHtml(request) {
+
+  return '<!DOCTYPE html>'
+       + '<html><head>' + "Test Page" + '</head><body>' + "Test text" + '</body></html>';
+};
