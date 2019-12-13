@@ -11,16 +11,14 @@ pipeline {
         }
         stage('Install') {
             steps {
-                echo 'Testing..'
-                sh 'npm config ls'
+                echo 'installing..'
                 sh 'npm install'
-
             }
         }
         stage('Test'){
           steps {
             echo 'Testing...'
-            sh 'node demo.js'
+            sh 'node demo.js'&
             open('https://localhost:8082/')
           }
         }
