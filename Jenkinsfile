@@ -11,19 +11,19 @@ pipeline {
         }
         stage('Install') {
             steps {
-                echo 'installing..'
+                //echo 'installing..'
                 sh 'npm install'
             }
         }
         stage('Test'){
           steps {
-            echo 'Testing...'
+            //echo 'Testing...'
             sh 'npm test'
           }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                //echo 'Deploying....'
                 sh 'node demo.js'
             }
         }
