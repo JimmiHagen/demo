@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Test'){
           steps {
-            echo 'Testing...''
+            echo 'Testing...'
             sh 'node demo.js'
             open('https://localhost:8082/')
           }
