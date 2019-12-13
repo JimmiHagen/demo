@@ -18,14 +18,14 @@ pipeline {
         stage('Test'){
           steps {
             echo 'Testing...'
-            sh 'node demo.js'&
+            sh 'node demo.js'
             open('https://localhost:8082/')
           }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'node demo.js'&
+                sh 'node demo.js'
             }
         }
     }
